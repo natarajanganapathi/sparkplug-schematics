@@ -1,0 +1,13 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "spc": {
+      "description": "SparkPlug component",
+      "factory": "./spc/index#spc"
+    },
+    "spa": {
+      "description": "SparkPlug application",
+      "factory": "./spa/index#spa"
+    }
+  }
+}
