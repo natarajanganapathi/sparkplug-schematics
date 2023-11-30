@@ -1,5 +1,5 @@
 {
-  "name": "sparkplug-schematics",
+  "name": "@sparkplug/schematics",
   "version": "0.0.0",
   "description": "A blank schematics",
   "scripts": {
