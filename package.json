@@ -1,6 +1,6 @@
 {
-  "name": "@sparkplug/schematics",
-  "version": "0.0.0",
+  "name": "@freshthought/schematics",
+  "version": "0.0.0-alpha.0",
   "description": "A blank schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -9,6 +9,10 @@
   "keywords": [
     "schematics"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/natarajanmca11",
+    "access": "public"
+  },  
   "author": "Natarajan Ganapathi",
   "license": "MIT",
   "schematics": "./src/collection.json",
