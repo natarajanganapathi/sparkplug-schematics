@@ -1,12 +1,12 @@
 {
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
-    "spc": {
-      "description": "SparkPlug component",
+    "ftc": {
+      "description": "freshthought component",
       "factory": "./spc/index#spc"
     },
-    "spa": {
-      "description": "SparkPlug application",
+    "fta": {
+      "description": "freshthought application",
       "factory": "./spa/index#spa"
     }
   }
