@@ -1,9 +1,7 @@
-name: Build
+name: Release
 
 on:
   push:
-    branches: [ "main", "feature/*" ]
-  pull_request:
     branches: [ "main" ]
 
 jobs:
@@ -22,4 +20,8 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build
-    # - run: npm test
+    - name: Replace <TOKEN> with NPM_TOKEN in .npmrc
+      run: sed -i 's|//npm.pkg.github.com/:_authToken=<TOKEN>|//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}|' .npmrc 
+    - run: npm publish --access public
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
